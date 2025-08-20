@@ -22,7 +22,7 @@ fetch(url)
  
 
     // Example: Log the first 10 words
-    console.log('First 10 words:', words.slice(0, 10));
+    console.log('First 10 words:', validWords.slice(0, 10));
 
     // Log all words (optional)
     // words.forEach(word => console.log(word));
@@ -79,6 +79,8 @@ const init = () => {
     squareEls[i].textContent = placeHolderWords[funnyIndex][i];
     squareEls[i].classList.add("placeholder");
     board[i] = "";  // keep empty so typing still works
+    
+    messageEl.textContent = "Start typing now!";//get start typing showing but don't mess up other messages
   
   
   }
@@ -113,6 +115,7 @@ const updateMessage = () => {
   } else if (win && maxGuesses === 1) {
     messageEl.textContent = "Phew";
   }
+
 };
 
 const getRandomWord = () => {
@@ -161,14 +164,12 @@ const handleLetter = (event) => {
     }
 
     //messages of encouragment/instruction
-    if (board.every(cell => cell === '')) {
-      messageEl.textContent = "Start typing now!";
-    } else if (board.some(cell => cell !== '') && column !== 5) {
-      messageEl.textContent = "Rock on!";
-    } else if (column === 5 && !gameLost) {
-      messageEl.textContent = "Hit Enter!";
-    }
+    if (board.some(cell => cell !== '') && column < 5) {
+    messageEl.textContent = "Rock on!";
+  } else if (column === 5 && !gameLost) {
+    messageEl.textContent = "Hit Enter!";
   }
+}
 
   render();
 };

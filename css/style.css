@@ -49,3 +49,7 @@ h1 {
   font-size: 60px;
   justify-self: center;
 }
+
+body {
+  background-color: whitesmoke;
+}
