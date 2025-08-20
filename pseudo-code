@@ -1,0 +1,70 @@
+//Here's my pseudocode. I should mention that in the process of making the app I changed things a lot. I realized that I was thinking of placing the tiles in a totally backward way; however, most of this planning is still acccurate.
+// -------------------------------- planning --------------------------------
+// need something to add letters for player (listener/handler)
+// need something to build the board
+// need something to update the board
+
+// ------------------------------- pseudo code -------------------------------
+
+// consts:
+// - array of five-letter words (e.g., "water", "local", ...)
+// - WORD_LENGTH = 5
+// - MAX_GUESSES = 6
+// 
+
+// variables:
+//  board = array of 30 "" (represents 6 rows × 5 columns)
+//  game_won = false
+// - game_on = true   // controls whether input is accepted
+// - guess_number = 0 // increments after each submitted guess
+// - tiles_hidden = true
+// -secret word?
+
+// Cached Element References:
+// - tiles/squares (NodeList)
+// - message element
+// - reset button
+// most likely reference to submit button
+
+// functions:
+
+// init()
+// - pick secret word
+// - reset board, flags such as failed/won, guess_number (as a function)
+//  hide message/reset; show board
+// - render()
+
+// render()
+// - update board with letters + colors if available--fliping tiles?
+// update message --how many guesses
+// - show/hide reset/message based on game state
+
+// updateBoard()
+// - for each tile index, be able to see letter picked by user
+// (optional) set color class based on feedback for that row--yellow bad, green good
+
+// flipTile()
+// somehow should animate/reveal a row’s tiles when a guess is submitted
+
+// updateMsg()
+// - if game_won → “You win!”
+// else if out of guesses → “You lose!” (show secret word)
+//  else → “Enter a 5-letter word”
+
+// place_letters(letter)
+// - put letter in the next empty tile in current row (if room)
+
+// submit button (or Enter)
+// if row has 5 letters → score guess (green/yellow/gray) and calls flip function
+// increment guess_number probably with +=
+// - set game_won or end game if out of guesses
+// - calling render()
+
+// handleClick(event)
+// - if using clickable tiles/keyboard, route to place_letters() or submit()
+
+// listeners:
+// - tiles (or on-screen keyboard)--> handleClick()
+//  ***key stuff (not sure what) (A–Z, Backspace, Enter)--> place/delete??/submit
+// maybe some more listeners for submit at least
+
