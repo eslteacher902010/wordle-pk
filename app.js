@@ -158,7 +158,7 @@ const handleLetter = (event) => {
     let index = calculateTileIndex(row, column);
     board[index] = '';
 
-  // check this against the github list as well
+  
   } else if (/^[a-z]$/i.test(event.key)) {
     if (column < 5) {
       placeLetter(letter, index);
