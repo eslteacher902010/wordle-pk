@@ -1,6 +1,7 @@
 /*-------------------------------- Constants --------------------------------*/
 const fiveLetterWords = ['drive', 'world', 'solid', 'posit', 'local'];
 
+//got this from github
 validWords=[]
 // URL of the TXT file /* I got this on github and figured out how to use it */
 const url = 'https://darkermango.github.io/5-Letter-words/words.txt';

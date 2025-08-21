@@ -1,4 +1,6 @@
-![wordleboard](./wordle_mine.png)
+![wordleboard](./assests/wordle_mine.png)
+
+[Live Demo](https://eslteacher902010.github.io/wordle-pk/)
 
 # Making a Wordle game in JavaScript
 
