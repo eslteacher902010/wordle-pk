@@ -1,7 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
 const fiveLetterWords = ['drive', 'world', 'solid', 'posit', 'local'];
 
-//got this from github
 validWords=[]
 // URL of the TXT file /* I got this on github and figured out how to use it */
 const url = 'https://darkermango.github.io/5-Letter-words/words.txt';
@@ -57,6 +56,9 @@ const init = () => {
   win = false;
   gameLost= false; 
   maxGuesses = 6;
+
+  row = 0;
+  column = 0;
 
   // clear everything first
   squareEls.forEach(function (sqr) {
